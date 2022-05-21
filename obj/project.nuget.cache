@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "LMY2p+NO6na8cAYMxfxrO1p/VmZ6p1Q7FgeEl1sT+ORoSbNeVxszZAU8GD6ZHyo3GDwYHQUQNwkTGUaQqurJvg==",
+  "success": true,
+  "projectFilePath": "D:\\salas\\OneDrive - Universidad La Salle, A.C\\Repositories\\Cursos\\C# Masterclass\\13 WPF\\WinFormsApp1\\WinPurge.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\salas\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\microsoft.toolkit.uwp.notifications\\7.1.2\\microsoft.toolkit.uwp.notifications.7.1.2.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\salas\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.25\\microsoft.windows.sdk.net.ref.10.0.17763.25.nupkg.sha512"
+  ],
+  "logs": []
+}
