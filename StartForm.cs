@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.VisualBasic.Logging;
+using System.Security.Principal;
 
 namespace WinFormsApp1
 {
@@ -23,9 +24,20 @@ namespace WinFormsApp1
             backgroundWorker1.RunWorkerAsync();
         }
 
+        public static bool IsAdministrator =>
+        new WindowsPrincipal(WindowsIdentity.GetCurrent())
+           .IsInRole(WindowsBuiltInRole.Administrator);
+
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+            if (IsAdministrator)
+            {
+                pictureBox1.Image = WinPurge.Properties.Resources.WinPurgeAdmin;
+            }
+            else
+            {
+                pictureBox1.Image = WinPurge.Properties.Resources.WinPurge;
+            }
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -65,12 +77,12 @@ namespace WinFormsApp1
             backgroundWorker1.ReportProgress(j +2 );
             process3.WaitForExit();
 
-            //label1.Text = "Loading Win32 Apps";
+            SetText("Loading Win32 Apps");
             Thread.Sleep(700);
             backgroundWorker1.ReportProgress(90);
-            //label1.Text = "Loading Done";
+            SetText("Loading Done");
             Thread.Sleep(1500);
-            //label1.Text = "Opening Window";
+            SetText("Opening Window");
             Thread.Sleep(500);
             backgroundWorker1.ReportProgress(100);
             new ToastContentBuilder().AddText("WinPurge").AddText("Loading Done!").Show();
@@ -88,6 +100,26 @@ namespace WinFormsApp1
         {
             this.Close();
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        delegate void SetTextCallback(string text);
+
+        private void SetText(string text)
+        {
+            if (this.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.label1.Text = text;
+            }
         }
     }
 }

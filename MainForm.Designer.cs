@@ -101,7 +101,7 @@
             // selectedToolStripMenuItem
             // 
             this.selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            this.selectedToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.selectedToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.selectedToolStripMenuItem.Text = "Selected";
             this.selectedToolStripMenuItem.Click += new System.EventHandler(this.selectedToolStripMenuItem_Click);
             // 
@@ -328,7 +328,7 @@
             // 
             this.toolStripButton3.CheckOnClick = true;
             this.toolStripButton3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Image = global::WinPurge.Properties.Resources.Microsoft_logo__2012_e_svg;
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(238, 24);
@@ -381,6 +381,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "WinPurge";

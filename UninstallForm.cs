@@ -49,6 +49,7 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+            progressBar1.Visible = true;
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
@@ -69,6 +70,8 @@ namespace WinFormsApp1
             {
                 
                 new ToastContentBuilder().AddText("Debugging").AddText(QueueUninstall.Peek().ToString()).Show();
+                SetText($"Uninstalling {x}");
+                
                 QueueUninstall.Dequeue();
                 //checkedListBox1.Items.Remove(x);
                 progress += progressDiv;
@@ -94,6 +97,7 @@ namespace WinFormsApp1
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            SetText("Uninstall Completed");
             string message=string.Empty;
             button1.Enabled = true;
             new ToastContentBuilder().AddText("Debugging").AddText("Finished Uninstalling!").Show();
@@ -196,7 +200,22 @@ namespace WinFormsApp1
 
         private void UninstallForm_Load(object sender, EventArgs e)
         {
+            progressBar1.Visible = false;
+        }
 
+        delegate void SetTextCallback(string text);
+
+        private void SetText(string text)
+        {
+            if (this.InvokeRequired)
+            {
+                SetTextCallback d = new SetTextCallback(SetText);
+                this.Invoke(d, new object[] { text });
+            }
+            else
+            {
+                this.Text = text;
+            }
         }
 
         private static ArrayList PrintDirectories(string path, string program)

@@ -63,9 +63,29 @@ namespace WinPurge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancelar_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancelar-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cita_recurrente_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cita-recurrente-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_de_acuerdo_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-de-acuerdo-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +156,66 @@ namespace WinPurge.Properties {
         internal static System.Drawing.Bitmap icons8_microsoft_admin_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-microsoft-admin-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_logo__2012__svg {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_logo_(2012).svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_logo__2012__svg___Copy {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_logo_(2012).svg - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_logo__2012_e_svg {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_logo_(2012)e.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_logo__201e2__svg___Copy {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_logo_(201e2).svg - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinPurge {
+            get {
+                object obj = ResourceManager.GetObject("WinPurge", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinPurgeAdmin {
+            get {
+                object obj = ResourceManager.GetObject("WinPurgeAdmin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

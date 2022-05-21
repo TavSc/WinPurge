@@ -41,6 +41,7 @@ namespace WinFormsApp1
             if (IsAdministrator == true)
             {
                 this.Text = "WinPurge (Administrator)";
+                this.Icon = Icon.ExtractAssociatedIcon(@"..\..\..\Resources\WinPurgeAdmin.ico");
             }
             Debug.WriteLine("Test");
 
@@ -288,6 +289,7 @@ namespace WinFormsApp1
             if (toolStripButton3.Checked)
             {
                 toolStripButton3.Text = "Enable Published by Microsoft";
+                toolStripButton3.Image = WinPurge.Properties.Resources.Microsoft_logo__201e2__svg___Copy;
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (row.Cells["publisherColumn"].Value.ToString().Trim() == "Microsoft Corporation"  || row.Cells["publisherColumn"].Value.ToString().Trim() == "Microsoft Windows")
@@ -300,6 +302,7 @@ namespace WinFormsApp1
             else
             {
                 toolStripButton3.Text = "Disable Published by Microsoft";
+                toolStripButton3.Image=WinPurge.Properties.Resources.Microsoft_logo__2012_e_svg;
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
                     if (row.Cells["publisherColumn"].Value.ToString().Trim() == "Microsoft Corporation" || row.Cells["publisherColumn"].Value.ToString().Trim() == "Microsoft Windows")
