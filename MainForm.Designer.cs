@@ -59,8 +59,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
@@ -87,7 +85,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1142, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -261,7 +258,7 @@
             this.uninstallStringColumn.MinimumWidth = 6;
             this.uninstallStringColumn.Name = "uninstallStringColumn";
             this.uninstallStringColumn.ReadOnly = true;
-            this.uninstallStringColumn.Width = 716;
+            this.uninstallStringColumn.Width = 757;
             // 
             // toolStrip1
             // 
@@ -277,8 +274,6 @@
             this.toolStripSeparator3,
             this.toolStripButton4,
             this.toolStripSeparator4,
-            this.toolStripButton5,
-            this.toolStripSeparator6,
             this.toolStripButton6});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 42);
@@ -291,12 +286,14 @@
             // 
             this.toolStripButton1.Enabled = false;
             this.toolStripButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Image = global::WinPurge.Properties.Resources.icons8_eliminar_escudo_48;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(151, 24);
             this.toolStripButton1.Text = "Uninstall Selected";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.MouseEnter += new System.EventHandler(this.toolStripButton1_MouseEnter);
+            this.toolStripButton1.MouseLeave += new System.EventHandler(this.toolStripButton1_MouseLeave);
             // 
             // toolStripSeparator1
             // 
@@ -307,12 +304,14 @@
             // 
             this.toolStripButton2.CheckOnClick = true;
             this.toolStripButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Image = global::WinPurge.Properties.Resources.icons8_marque_todas_las_48;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(95, 24);
             this.toolStripButton2.Text = "Select All";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripButton2.MouseEnter += new System.EventHandler(this.toolStripButton2_MouseEnter);
+            this.toolStripButton2.MouseLeave += new System.EventHandler(this.toolStripButton2_MouseLeave);
             // 
             // toolStripSeparator2
             // 
@@ -338,7 +337,7 @@
             // toolStripButton4
             // 
             this.toolStripButton4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Image = global::WinPurge.Properties.Resources.icons8_cita_recurrente_48;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(160, 24);
@@ -350,32 +349,17 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 23);
             // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(146, 24);
-            this.toolStripButton5.Text = "Open in Terminal";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 23);
-            // 
             // toolStripButton6
             // 
             this.toolStripButton6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Image = global::WinPurge.Properties.Resources.icons8_microsoft_admin_48;
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(193, 24);
             this.toolStripButton6.Text = "Reload as Administrator";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -386,7 +370,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "WinPurge";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -421,11 +405,11 @@
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton toolStripButton4;
         private ToolStripSeparator toolStripSeparator4;
-        private ToolStripButton toolStripButton5;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private ToolStripButton toolStripButton6;
         private DataGridViewCheckBoxColumn nameColumn;
         private DataGridViewImageColumn iconColumn;
         private DataGridViewTextBoxColumn displayNameColumn;
@@ -433,7 +417,5 @@
         private DataGridViewTextBoxColumn versionColumn;
         private DataGridViewTextBoxColumn typeColumn;
         private DataGridViewTextBoxColumn uninstallStringColumn;
-        private ToolStripSeparator toolStripSeparator6;
-        private ToolStripButton toolStripButton6;
     }
 }

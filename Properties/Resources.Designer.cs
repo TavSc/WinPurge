@@ -63,9 +63,69 @@ namespace WinPurge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cita_recurrente_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cita-recurrente-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_desinstalar_programas_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-desinstalar-programas-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eliminar_escudo_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eliminar-escudo-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_error_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-error-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_escudo_de_advertencia_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-escudo-de-advertencia-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_marque_todas_las_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-marque-todas-las-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_admin_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-admin-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

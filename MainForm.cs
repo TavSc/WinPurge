@@ -5,6 +5,8 @@ using System.Diagnostics;
 using Microsoft.Toolkit.Uwp.Notifications;
 using System.ComponentModel;
 using System.Security.Principal;
+using System.Reflection;
+using System.Drawing;
 
 namespace WinFormsApp1
 {
@@ -18,8 +20,10 @@ namespace WinFormsApp1
             InitializeComponent();
             dataGridView1.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             //this.Text = String.Empty;
-            
-            
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            dataGridView1, new object[] { true });
             //toolStripStatusLabel3.Alignment = Tool;
             dataGridView1.Enabled = true;
             dataGridView1.ReadOnly = false;
@@ -47,6 +51,8 @@ namespace WinFormsApp1
         {
 
         }
+
+
 
         private void selectedToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -331,24 +337,7 @@ namespace WinFormsApp1
             
         }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
-        {
-            if (IsAdministrator == true)
-            {
-                var result = MessageBox.Show("The application will reload as Administrator. If you want to run it without administrator privileges, close the app and open it again. Do you want to continue anyways?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (result == DialogResult.OK)
-                {
-                    Process.Start(@"D:\salas\OneDrive - Universidad La Salle, A.C\Engineering\6_Sistemas Operativos 2\Tercer Parcial\Proyecto\Console_DN5\bin\Debug\net5.0-windows10.0.17763.0\Console_DN5.exe");
-                    this.Close();
-                }
-            }
-            else
-            {
-                Process.Start(@"D:\salas\OneDrive - Universidad La Salle, A.C\Engineering\6_Sistemas Operativos 2\Tercer Parcial\Proyecto\Console_DN5\bin\Debug\net5.0-windows10.0.17763.0\Console_DN5.exe");
-                this.Close();
-            }
-            
-        }
+        
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -393,45 +382,45 @@ namespace WinFormsApp1
             proc.FileName = Application.ExecutablePath;
             proc.Verb = "runas";
 
-            if (IsAdministrator == true)
+         
+            try
             {
-                try
-                {
-                    Process.Start(proc);
-                }
-                catch
-                {
-                    return;
-                }
-                Application.Exit();
+                Process.Start(proc);
             }
-            else
+            catch
             {
-                var warningMessageBox = MessageBox.Show("R u tryin to run as admin?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                if (warningMessageBox == DialogResult.OK)
-                {
-                    try
-                    {
-                        Process.Start(proc);
-                    }
-                    catch
-                    {
-                        return;
-                    }
-                    Application.Exit();
-                }
+                return;
             }
-            
+            Application.Exit();
         }
+
+            
+        
 
         public static bool IsAdministrator =>
         new WindowsPrincipal(WindowsIdentity.GetCurrent())
            .IsInRole(WindowsBuiltInRole.Administrator);
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void toolStripButton1_MouseEnter(object sender, EventArgs e)
         {
-
+            toolStripButton1.ForeColor = Color.Black;
         }
+
+        private void toolStripButton1_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripButton1.ForeColor = Color.White;
+        }
+        private void toolStripButton2_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripButton2.ForeColor = Color.Black;
+        }
+
+        private void toolStripButton2_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripButton2.ForeColor = Color.White;
+        }
+
+
+
 
 
 
