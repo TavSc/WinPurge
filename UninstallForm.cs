@@ -63,14 +63,14 @@ namespace WinFormsApp1
             button3.ForeColor = Color.Gray;
 
             int progress = 0;
-            int progressDiv = 100 / listBox1.Items.Count;
+            int progressDiv = 100 /listBox1.Items.Count;
             int rest = 100 % listBox1.Items.Count;
             foreach (string x in listBox1.Items)
             {
                 
                 new ToastContentBuilder().AddText("Debugging").AddText(QueueUninstall.Peek().ToString()).Show();
                 QueueUninstall.Dequeue();
-                //listBox1.Items.Remove(x);
+                //checkedListBox1.Items.Remove(x);
                 progress += progressDiv;
                 backgroundWorker1.ReportProgress(progress);         
                 System.Threading.Thread.Sleep(7000);
@@ -192,6 +192,11 @@ namespace WinFormsApp1
                 //Console.WriteLine($"Path {path} exists.");
                 return true;
             }
+        }
+
+        private void UninstallForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private static ArrayList PrintDirectories(string path, string program)

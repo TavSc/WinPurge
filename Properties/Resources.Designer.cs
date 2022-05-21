@@ -113,6 +113,16 @@ namespace WinPurge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_información_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-información-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_marque_todas_las_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-marque-todas-las-48", resourceCulture);

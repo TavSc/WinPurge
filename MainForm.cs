@@ -28,7 +28,6 @@ namespace WinFormsApp1
             dataGridView1.Enabled = true;
             dataGridView1.ReadOnly = false;
             dataGridView1.RowHeadersVisible = false;
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -46,13 +45,6 @@ namespace WinFormsApp1
             Debug.WriteLine("Test");
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
 
         private void selectedToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -418,6 +410,83 @@ namespace WinFormsApp1
         {
             toolStripButton2.ForeColor = Color.White;
         }
+
+        private void toolStripButton3_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripButton3.ForeColor = Color.Black;
+        }
+
+        private void toolStripButton3_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripButton3.ForeColor = Color.White;
+        }
+
+        private void toolStripButton4_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripButton4.ForeColor = Color.Black;
+        }
+
+        private void toolStripButton4_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripButton4.ForeColor = Color.White;
+        }
+
+        private void toolStripButton6_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripButton6.ForeColor = Color.Black;
+        }
+
+        private void toolStripButton6_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripButton6.ForeColor = Color.White;
+        }
+
+        private void fileToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            fileToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void fileToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            if (fileToolStripMenuItem.Enabled) {
+                fileToolStripMenuItem.ForeColor = Color.Black;
+            }
+            else
+            {
+                fileToolStripMenuItem.ForeColor = Color.White;
+            }
+            
+        }
+
+        private void viewToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+
+            viewToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void viewToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            viewToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void helpToolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+
+            helpToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void helpToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            helpToolStripMenuItem.ForeColor = Color.White;
+        }
+
+        private void fileToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            fileToolStripMenuItem.ForeColor = Color.White;
+        }
+
+
+
 
 
 

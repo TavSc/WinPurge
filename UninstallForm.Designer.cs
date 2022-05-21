@@ -31,28 +31,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(139, 52);
+            this.label1.Location = new System.Drawing.Point(119, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.Size = new System.Drawing.Size(354, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "The following programs are about to be uninstalled.";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 238);
+            this.button1.Location = new System.Drawing.Point(572, 222);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 29);
             this.button1.TabIndex = 1;
@@ -62,28 +64,16 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WinPurge.Properties.Resources.icons8_error_48;
-            this.pictureBox1.Location = new System.Drawing.Point(42, 30);
+            this.pictureBox1.Image = global::WinPurge.Properties.Resources.icons8_información_48;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 53);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(236, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(335, 260);
-            this.listBox1.TabIndex = 4;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(127, 238);
+            this.button2.Location = new System.Drawing.Point(681, 222);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 5;
@@ -93,7 +83,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(18, 194);
+            this.button3.Location = new System.Drawing.Point(572, 178);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(203, 29);
             this.button3.TabIndex = 6;
@@ -103,9 +93,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(18, 146);
+            this.progressBar1.Location = new System.Drawing.Point(29, 462);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(203, 29);
+            this.progressBar1.Size = new System.Drawing.Size(746, 29);
             this.progressBar1.TabIndex = 7;
             // 
             // backgroundWorker1
@@ -119,23 +109,46 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(110, 123);
+            this.label2.Location = new System.Drawing.Point(664, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "0";
             // 
-            // Form3
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(12, 114);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(536, 342);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Programs to Uninstall";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.ForeColor = System.Drawing.SystemColors.Menu;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(6, 26);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(512, 300);
+            this.listBox1.TabIndex = 0;
+            // 
+            // UninstallForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(583, 295);
+            this.ClientSize = new System.Drawing.Size(788, 508);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -143,10 +156,12 @@
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form3";
+            this.Name = "UninstallForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.UninstallForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,11 +172,12 @@
         private Label label1;
         private Button button1;
         private PictureBox pictureBox1;
-        private ListBox listBox1;
         private Button button2;
         private Button button3;
         private ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Label label2;
+        private GroupBox groupBox1;
+        private ListBox listBox1;
     }
 }

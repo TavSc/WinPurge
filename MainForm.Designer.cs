@@ -94,11 +94,14 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 40);
             this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.DropDownClosed += new System.EventHandler(this.fileToolStripMenuItem_DropDownClosed);
+            this.fileToolStripMenuItem.MouseEnter += new System.EventHandler(this.fileToolStripMenuItem_MouseEnter);
+            this.fileToolStripMenuItem.MouseLeave += new System.EventHandler(this.fileToolStripMenuItem_MouseLeave);
             // 
             // selectedToolStripMenuItem
             // 
             this.selectedToolStripMenuItem.Name = "selectedToolStripMenuItem";
-            this.selectedToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.selectedToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.selectedToolStripMenuItem.Text = "Selected";
             this.selectedToolStripMenuItem.Click += new System.EventHandler(this.selectedToolStripMenuItem_Click);
             // 
@@ -108,6 +111,8 @@
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 40);
             this.viewToolStripMenuItem.Text = "View";
+            this.viewToolStripMenuItem.MouseEnter += new System.EventHandler(this.viewToolStripMenuItem_MouseEnter);
+            this.viewToolStripMenuItem.MouseLeave += new System.EventHandler(this.viewToolStripMenuItem_MouseLeave);
             // 
             // helpToolStripMenuItem
             // 
@@ -119,6 +124,8 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 40);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.MouseEnter += new System.EventHandler(this.helpToolStripMenuItem_MouseEnter);
+            this.helpToolStripMenuItem.MouseLeave += new System.EventHandler(this.helpToolStripMenuItem_MouseLeave);
             // 
             // settingsToolStripMenuItem
             // 
@@ -196,7 +203,6 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1142, 546);
             this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -328,6 +334,8 @@
             this.toolStripButton3.Size = new System.Drawing.Size(238, 24);
             this.toolStripButton3.Text = "Disable Published by Microsoft";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.toolStripButton3.MouseEnter += new System.EventHandler(this.toolStripButton3_MouseEnter);
+            this.toolStripButton3.MouseLeave += new System.EventHandler(this.toolStripButton3_MouseLeave);
             // 
             // toolStripSeparator3
             // 
@@ -343,6 +351,8 @@
             this.toolStripButton4.Size = new System.Drawing.Size(160, 24);
             this.toolStripButton4.Text = "Reload Uninstallers";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.toolStripButton4.MouseEnter += new System.EventHandler(this.toolStripButton4_MouseEnter);
+            this.toolStripButton4.MouseLeave += new System.EventHandler(this.toolStripButton4_MouseLeave);
             // 
             // toolStripSeparator4
             // 
@@ -358,6 +368,8 @@
             this.toolStripButton6.Size = new System.Drawing.Size(193, 24);
             this.toolStripButton6.Text = "Reload as Administrator";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            this.toolStripButton6.MouseEnter += new System.EventHandler(this.toolStripButton6_MouseEnter);
+            this.toolStripButton6.MouseLeave += new System.EventHandler(this.toolStripButton6_MouseLeave);
             // 
             // MainForm
             // 
