@@ -104,9 +104,9 @@ namespace WinFormsApp1
                     proc.Start();
                     proc.WaitForExit();
                     DateTime stop = proc.ExitTime;
-                    if ((stop - start).TotalSeconds < 0.5)
+                    if ((stop - start).TotalSeconds < 0.1)
                     {
-                        Thread.Sleep(6000);
+                        Thread.Sleep(10000);
                     }
                 }
 
@@ -148,28 +148,14 @@ namespace WinFormsApp1
             {
                 CheckLeftovers(x, list);
             }
-            
-            ArrayList temp = new();
-            
-            for(int i = 0; i < list.Count; i++)
+
+            foreach(string x in QueuePublisher)
             {
-                if (i > 1)
-                {
-                    string a=list[i].ToString();
-                    string b=list[i-1].ToString();
-                    if(a.Trim()!=b.Trim())
-                    {
-                        temp.Add(list[i]);
-                    }
-                    else
-                    {
-                        continue;
-                    }
-                }
+                CheckLeftovers(x,list);
             }
-            
-            
             list.Sort();
+            
+            
             if(list.Count > 0)
             {
                 LeftoversForm leftoversForm = new LeftoversForm(list);
@@ -203,7 +189,7 @@ namespace WinFormsApp1
 
         private ArrayList CheckLeftovers(string programName,ArrayList returnList)
         {
-            ArrayList list = new ArrayList();
+            ArrayList list;
             
             foreach (var x in drives)
             {
@@ -215,7 +201,10 @@ namespace WinFormsApp1
                     {
                         foreach(var y in list)
                         {
-                            returnList.Add(y.ToString());
+                            if (!returnList.Contains(y.ToString()))
+                            {
+                                returnList.Add(y.ToString());
+                            }           
                         }
                     }
                     
@@ -228,7 +217,10 @@ namespace WinFormsApp1
                     {
                         foreach (var y in list)
                         {
-                            returnList.Add(y.ToString());
+                            if (!returnList.Contains(y.ToString()))
+                            {
+                                returnList.Add(y.ToString());
+                            }
                         }
                     }
                     //PrintDirectories(x + programFilesPathx86, publisherName);
@@ -240,7 +232,10 @@ namespace WinFormsApp1
                     {
                         foreach (var y in list)
                         {
-                            returnList.Add(y.ToString());
+                            if (!returnList.Contains(y.ToString()))
+                            {
+                                returnList.Add(y.ToString());
+                            }
                         }
                     }
                     //PrintDirectories(x + programData, publisherName);

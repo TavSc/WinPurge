@@ -52,6 +52,8 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -114,7 +116,6 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 53);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(1175, 570);
@@ -127,7 +128,6 @@
             this.nameColumn.HeaderText = "";
             this.nameColumn.MinimumWidth = 6;
             this.nameColumn.Name = "nameColumn";
-            this.nameColumn.ReadOnly = true;
             this.nameColumn.Width = 25;
             // 
             // iconColumn
@@ -136,7 +136,6 @@
             this.iconColumn.HeaderText = "";
             this.iconColumn.MinimumWidth = 6;
             this.iconColumn.Name = "iconColumn";
-            this.iconColumn.ReadOnly = true;
             this.iconColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.iconColumn.Width = 40;
             // 
@@ -147,7 +146,6 @@
             this.displayNameColumn.HeaderText = "Name";
             this.displayNameColumn.MinimumWidth = 6;
             this.displayNameColumn.Name = "displayNameColumn";
-            this.displayNameColumn.ReadOnly = true;
             this.displayNameColumn.Width = 500;
             // 
             // publisherColumn
@@ -155,7 +153,6 @@
             this.publisherColumn.HeaderText = "Publisher";
             this.publisherColumn.MinimumWidth = 6;
             this.publisherColumn.Name = "publisherColumn";
-            this.publisherColumn.ReadOnly = true;
             this.publisherColumn.Width = 310;
             // 
             // versionColumn
@@ -163,7 +160,6 @@
             this.versionColumn.HeaderText = "Version";
             this.versionColumn.MinimumWidth = 6;
             this.versionColumn.Name = "versionColumn";
-            this.versionColumn.ReadOnly = true;
             this.versionColumn.Width = 125;
             // 
             // typeColumn
@@ -171,7 +167,6 @@
             this.typeColumn.HeaderText = "Type";
             this.typeColumn.MinimumWidth = 6;
             this.typeColumn.Name = "typeColumn";
-            this.typeColumn.ReadOnly = true;
             this.typeColumn.Width = 140;
             // 
             // uninstallStringColumn
@@ -179,7 +174,6 @@
             this.uninstallStringColumn.HeaderText = "Uninstall String";
             this.uninstallStringColumn.MinimumWidth = 6;
             this.uninstallStringColumn.Name = "uninstallStringColumn";
-            this.uninstallStringColumn.ReadOnly = true;
             this.uninstallStringColumn.Width = 757;
             // 
             // toolStrip1
@@ -196,7 +190,9 @@
             this.toolStripSeparator3,
             this.toolStripButton4,
             this.toolStripSeparator4,
-            this.toolStripButton6});
+            this.toolStripButton6,
+            this.toolStripSeparator5,
+            this.toolStripButton5});
             this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -301,6 +297,25 @@
             this.toolStripButton6.MouseEnter += new System.EventHandler(this.toolStripButton6_MouseEnter);
             this.toolStripButton6.MouseLeave += new System.EventHandler(this.toolStripButton6_MouseLeave);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.AutoSize = false;
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.toolStripButton5.Image = global::WinPurge.Properties.Resources.icons8_github_48;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Padding = new System.Windows.Forms.Padding(5, 10, 5, 0);
+            this.toolStripButton5.Size = new System.Drawing.Size(154, 34);
+            this.toolStripButton5.Text = "Open Repository";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            this.toolStripButton5.MouseEnter += new System.EventHandler(this.toolStripButton5_MouseEnter);
+            this.toolStripButton5.MouseLeave += new System.EventHandler(this.toolStripButton5_MouseLeave);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -348,5 +363,7 @@
         private DataGridViewTextBoxColumn versionColumn;
         private DataGridViewTextBoxColumn typeColumn;
         private DataGridViewTextBoxColumn uninstallStringColumn;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripButton toolStripButton5;
     }
 }

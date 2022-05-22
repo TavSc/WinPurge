@@ -25,8 +25,12 @@ namespace WinFormsApp1
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             dataGridView1, new object[] { true });
             //toolStripStatusLabel3.Alignment = Tool;
+            dataGridView1.Columns["displayNameColumn"].ReadOnly = true;
+            dataGridView1.Columns["publisherColumn"].ReadOnly = true;
+            dataGridView1.Columns["typeColumn"].ReadOnly = true;
+            dataGridView1.Columns["versionColumn"].ReadOnly = true;
+            dataGridView1.Columns["uninstallStringColumn"].ReadOnly = true;
             dataGridView1.Enabled = true;
-            dataGridView1.ReadOnly = false;
             dataGridView1.RowHeadersVisible = false;
         }
 
@@ -439,6 +443,24 @@ namespace WinFormsApp1
         private void toolStripButton6_MouseLeave(object sender, EventArgs e)
         {
             toolStripButton6.ForeColor = Color.White;
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Process p = new Process();
+            p.StartInfo.FileName = "https://github.com/TavSc/WinPurge";
+            p.StartInfo.UseShellExecute = true;
+            p.Start();
+        }
+
+        private void toolStripButton5_MouseEnter(object sender, EventArgs e)
+        {
+            toolStripButton5.ForeColor = Color.Black;
+        }
+
+        private void toolStripButton5_MouseLeave(object sender, EventArgs e)
+        {
+            toolStripButton5.ForeColor= Color.White;
         }
     }
 }

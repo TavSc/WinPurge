@@ -133,6 +133,16 @@ namespace WinPurge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_github_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-github-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_información_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-información-48", resourceCulture);
@@ -156,6 +166,16 @@ namespace WinPurge.Properties {
         internal static System.Drawing.Bitmap icons8_microsoft_admin_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-microsoft-admin-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_microsoft_admin_48__Custom_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-microsoft-admin-48 (Custom)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
