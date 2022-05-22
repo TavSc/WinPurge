@@ -42,7 +42,7 @@ namespace WinFormsApp1
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            label1.Text = "Loading Microsoft Store Apps";
+            SetText("Loading Microsoft Store Apps");
             int j = 0;
             for(int i = 0; i < 9; i++)
             {
@@ -120,6 +120,11 @@ namespace WinFormsApp1
             {
                 this.label1.Text = text;
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

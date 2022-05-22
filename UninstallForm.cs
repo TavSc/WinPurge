@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Collections;
 using Microsoft.Toolkit.Uwp.Notifications;
 using System.IO;
-
+using System.Diagnostics;
 
 
 
@@ -27,13 +27,15 @@ namespace WinFormsApp1
         public Queue queueName,queueUninstall;
         public Queue QueueName { get; set; }
         public Queue QueueUninstall { get; set; }
-        public UninstallForm(Queue queueName,Queue queueUninstall)
+        public Queue QueuePublisher { get; set; }
+        public UninstallForm(Queue queueName,Queue queueUninstall,Queue queuePublisher)
         {
             InitializeComponent();
-            this.label1.Text = "Selected";
+            //this.label1.Text = "Selected";
 
             QueueName = queueName;
             QueueUninstall=queueUninstall;
+            QueuePublisher = queuePublisher;
             foreach(string x in queueName)
             {
                 listBox1.Items.Add(x);  
@@ -62,21 +64,51 @@ namespace WinFormsApp1
             button1.ForeColor = Color.Gray;
             button2.ForeColor = Color.Gray;
             button3.ForeColor = Color.Gray;
-
+            string check, command;
             int progress = 0;
             int progressDiv = 100 /listBox1.Items.Count;
             int rest = 100 % listBox1.Items.Count;
             foreach (string x in listBox1.Items)
             {
                 
-                new ToastContentBuilder().AddText("Debugging").AddText(QueueUninstall.Peek().ToString()).Show();
+                //new ToastContentBuilder().AddText("Debugging").AddText(QueueUninstall.Peek().ToString()).Show();
                 SetText($"Uninstalling {x}");
                 
+                check = "";
+                Process process2 = new Process();
+                ProcessStartInfo start2 = new ProcessStartInfo();
+                start2.WindowStyle = ProcessWindowStyle.Hidden;
+
+                for (int i = 0; i < 18; i++)
+                {
+                    check += QueueUninstall.Peek().ToString()[i];
+                }
+
+                if (check == "Remove-AppxPackage")
+                {
+                    start2.FileName = @"powershell.exe";
+                    //command = @$"{x.Trim()}";
+                    command = "explorer.exe .";
+                    new ToastContentBuilder().AddText($"MSstore").AddText($"{QueueUninstall.Peek().ToString()}").Show();
+                    start2.Arguments = command;
+                    start2.CreateNoWindow = true;
+                    process2.StartInfo = start2;
+
+                    Process p = Process.Start(start2);
+                    //p.WaitForInputIdle();
+                    p.WaitForExit();
+
+                }
+                else
+                {
+                    Process pr=Process.Start("cmd.exe",$@"/C ""{QueueUninstall.Peek().ToString()}"" ");
+                    pr.CloseMainWindow();
+                    pr.WaitForExit();
+                }
+
                 QueueUninstall.Dequeue();
-                //checkedListBox1.Items.Remove(x);
                 progress += progressDiv;
                 backgroundWorker1.ReportProgress(progress);         
-                System.Threading.Thread.Sleep(7000);
 
             }
             backgroundWorker1.ReportProgress(rest+progress);
@@ -100,20 +132,50 @@ namespace WinFormsApp1
             SetText("Uninstall Completed");
             string message=string.Empty;
             button1.Enabled = true;
-            new ToastContentBuilder().AddText("Debugging").AddText("Finished Uninstalling!").Show();
+            new ToastContentBuilder().AddText("WinPurge").AddText("Finished Uninstalling!").Show();
             for(int i = 3; i != 0; i--)
             {
-                label2.Text=$"Closing this Window in {i} seconds";
+                label2.Text=$"Closing in {i} seconds";
                 Thread.Sleep(1000);
             }
 
-            foreach(string x in listBox1.Items)
+            ArrayList list = new ArrayList();
+            foreach (string x in listBox1.Items)
             {
+                CheckLeftovers(x, list);
+            }
+
+            foreach(string x in QueuePublisher)
+            {
+                CheckLeftovers(x, list);
                 message += Environment.NewLine;
                 message += x;
             }
-
+            
+            ArrayList temp = new();
+            
+            for(int i = 0; i < list.Count; i++)
+            {
+                if (i > 1)
+                {
+                    string a=list[i].ToString();
+                    string b=list[i-1].ToString();
+                    if(a.Trim()!=b.Trim())
+                    {
+                        temp.Add(list[i]);
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+         
             MessageBox.Show(message);
+            this.Close();
+            list.Sort();
+            LeftoversForm leftoversForm = new LeftoversForm(list);
+            leftoversForm.ShowDialog();
             Application.Restart();
         }
 
@@ -148,7 +210,7 @@ namespace WinFormsApp1
                     {
                         foreach(var y in list)
                         {
-                            returnList.Add(y);
+                            returnList.Add(y.ToString());
                         }
                     }
                     
@@ -161,7 +223,7 @@ namespace WinFormsApp1
                     {
                         foreach (var y in list)
                         {
-                            returnList.Add(y);
+                            returnList.Add(y.ToString());
                         }
                     }
                     //PrintDirectories(x + programFilesPathx86, publisherName);
@@ -173,7 +235,7 @@ namespace WinFormsApp1
                     {
                         foreach (var y in list)
                         {
-                            returnList.Add(y);
+                            returnList.Add(y.ToString());
                         }
                     }
                     //PrintDirectories(x + programData, publisherName);

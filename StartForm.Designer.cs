@@ -69,7 +69,8 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(417, 81);
             this.label2.TabIndex = 2;
-            this.label2.Text = "WinPurge 0.4";
+            this.label2.Text = "WinPurge 0.5";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 

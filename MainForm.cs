@@ -247,6 +247,7 @@ namespace WinFormsApp1
         {
             Queue selectedDisplayName=new Queue();
             Queue selectedUninstallString = new Queue();
+            Queue selectedPublisher=new Queue();
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 bool isSelected = Convert.ToBoolean(row.Cells["nameColumn"].Value);
@@ -255,12 +256,13 @@ namespace WinFormsApp1
                     //message += Environment.NewLine;
                     selectedDisplayName.Enqueue(row.Cells["displayNameColumn"].Value.ToString());
                     selectedUninstallString.Enqueue(row.Cells["uninstallStringColumn"].Value.ToString());
+                    selectedPublisher.Enqueue(row.Cells["publisherColumn"].Value.ToString());
                     //message += ;
                 }
             }
 
            // MessageBox.Show();
-            UninstallForm form3 = new UninstallForm(selectedDisplayName,selectedUninstallString);
+            UninstallForm form3 = new UninstallForm(selectedDisplayName,selectedUninstallString,selectedPublisher);
             form3.ShowDialog();
         }
 
