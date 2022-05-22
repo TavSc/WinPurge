@@ -111,7 +111,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(663, 352);
+            this.label2.Location = new System.Drawing.Point(662, 309);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 20);
             this.label2.TabIndex = 9;

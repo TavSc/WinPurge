@@ -34,16 +34,16 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(49, 67);
+            this.checkedListBox1.Location = new System.Drawing.Point(0, 12);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(642, 334);
+            this.checkedListBox1.Size = new System.Drawing.Size(602, 334);
             this.checkedListBox1.TabIndex = 0;
             // 
             // LeftoversForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 354);
             this.Controls.Add(this.checkedListBox1);
             this.Name = "LeftoversForm";
             this.Text = "LeftoversForm";

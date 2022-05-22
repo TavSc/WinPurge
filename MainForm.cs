@@ -32,6 +32,7 @@ namespace WinFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             StartForm form2 = new StartForm();
             form2.ShowDialog();
             displayItems();
@@ -44,7 +45,7 @@ namespace WinFormsApp1
                 this.Icon = Icon.ExtractAssociatedIcon(@"..\..\..\Resources\WinPurgeAdmin.ico");
             }
             Debug.WriteLine("Test");
-
+           
         }
 
         private void selectedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -391,9 +392,6 @@ namespace WinFormsApp1
             Application.Exit();
         }
 
-            
-        
-
         public static bool IsAdministrator =>
         new WindowsPrincipal(WindowsIdentity.GetCurrent())
            .IsInRole(WindowsBuiltInRole.Administrator);
@@ -448,46 +446,34 @@ namespace WinFormsApp1
 
         private void fileToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
-            fileToolStripMenuItem.ForeColor = Color.Black;
         }
 
         private void fileToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
-            if (fileToolStripMenuItem.Enabled) {
-                fileToolStripMenuItem.ForeColor = Color.Black;
-            }
-            else
-            {
-                fileToolStripMenuItem.ForeColor = Color.White;
-            }
+
             
         }
 
         private void viewToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
 
-            viewToolStripMenuItem.ForeColor = Color.Black;
         }
 
         private void viewToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
-            viewToolStripMenuItem.ForeColor = Color.White;
         }
 
         private void helpToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
 
-            helpToolStripMenuItem.ForeColor = Color.Black;
         }
 
         private void helpToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
-            helpToolStripMenuItem.ForeColor = Color.White;
         }
 
         private void fileToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
         {
-            fileToolStripMenuItem.ForeColor = Color.White;
         }
 
 
