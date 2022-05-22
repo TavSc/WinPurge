@@ -1,0 +1,17 @@
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.dll
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsApp1.dll
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
+D:\salas\OneDrive - Universidad La Salle, A.C\Repositories\Cursos\C# Masterclass\13 WPF\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
