@@ -203,6 +203,16 @@ namespace WinPurge.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_Store_2021_Light {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Store_2021_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WinPurge {
             get {
                 object obj = ResourceManager.GetObject("WinPurge", resourceCulture);

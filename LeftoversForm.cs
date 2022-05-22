@@ -26,5 +26,33 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string message=string.Empty;
+            foreach(string x in checkedListBox1.CheckedItems)
+            {
+                message += Environment.NewLine;
+                message += x;
+            }
+            MessageBox.Show(message);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void checkedListBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if(checkedListBox1.CheckedItems.Count > 0)
+            {
+                button1.Enabled = true;
+            }
+            else
+            {
+                button1.Enabled=false;
+            }
+        }
     }
 }

@@ -40,7 +40,6 @@ namespace WinFormsApp1
             {
                 listBox1.Items.Add(x);  
             }
-            button2.Enabled = true;
             button3.Enabled = true;
         }
 
@@ -53,7 +52,6 @@ namespace WinFormsApp1
         {
             progressBar1.Visible = true;
             button1.Enabled = false;
-            button2.Enabled = false;
             button3.Enabled = false;
             backgroundWorker1.RunWorkerAsync();
               
@@ -62,7 +60,6 @@ namespace WinFormsApp1
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             button1.ForeColor = Color.Gray;
-            button2.ForeColor = Color.Gray;
             button3.ForeColor = Color.Gray;
             string check, command;
             int progress = 0;
@@ -86,24 +83,31 @@ namespace WinFormsApp1
 
                 if (check == "Remove-AppxPackage")
                 {
-                    start2.FileName = @"powershell.exe";
-                    //command = @$"{x.Trim()}";
-                    command = "explorer.exe .";
-                    new ToastContentBuilder().AddText($"MSstore").AddText($"{QueueUninstall.Peek().ToString()}").Show();
+                    start2.FileName = "powershell.exe";
+                    command = @$"{QueueUninstall.Peek().ToString().Trim()}";
                     start2.Arguments = command;
-                    start2.CreateNoWindow = true;
                     process2.StartInfo = start2;
 
                     Process p = Process.Start(start2);
                     //p.WaitForInputIdle();
                     p.WaitForExit();
+                    p.Close();
 
                 }
                 else
                 {
-                    Process pr=Process.Start("cmd.exe",$@"/C ""{QueueUninstall.Peek().ToString()}"" ");
-                    pr.CloseMainWindow();
-                    pr.WaitForExit();
+                    DateTime start = DateTime.Now;
+                    Process proc = new Process();
+                    proc.StartInfo.FileName = "cmd.exe";
+                    proc.StartInfo.Arguments = $@"/C ""{QueueUninstall.Peek().ToString()}"" ";
+                    proc.StartInfo.CreateNoWindow = true;
+                    proc.Start();
+                    proc.WaitForExit();
+                    DateTime stop = proc.ExitTime;
+                    if ((stop - start).TotalSeconds < 0.5)
+                    {
+                        Thread.Sleep(6000);
+                    }
                 }
 
                 QueueUninstall.Dequeue();
@@ -119,7 +123,7 @@ namespace WinFormsApp1
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-            label2.Text = e.ProgressPercentage.ToString();
+            label2.Text=($"{e.ProgressPercentage}%");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -135,7 +139,7 @@ namespace WinFormsApp1
             new ToastContentBuilder().AddText("WinPurge").AddText("Finished Uninstalling!").Show();
             for(int i = 3; i != 0; i--)
             {
-                label2.Text=$"Closing in {i} seconds";
+                SetText($"Closing Window in {i} seconds.");
                 Thread.Sleep(1000);
             }
 
@@ -143,13 +147,6 @@ namespace WinFormsApp1
             foreach (string x in listBox1.Items)
             {
                 CheckLeftovers(x, list);
-            }
-
-            foreach(string x in QueuePublisher)
-            {
-                CheckLeftovers(x, list);
-                message += Environment.NewLine;
-                message += x;
             }
             
             ArrayList temp = new();
@@ -170,12 +167,20 @@ namespace WinFormsApp1
                     }
                 }
             }
-         
-            MessageBox.Show(message);
-            this.Close();
+            
+            
             list.Sort();
-            LeftoversForm leftoversForm = new LeftoversForm(list);
-            leftoversForm.ShowDialog();
+            if(list.Count > 0)
+            {
+                LeftoversForm leftoversForm = new LeftoversForm(list);
+                this.Close();
+                leftoversForm.ShowDialog();
+            }
+            else
+            {
+                this.Close();
+            }
+            
             Application.Restart();
         }
 

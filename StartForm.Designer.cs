@@ -69,7 +69,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(417, 81);
             this.label2.TabIndex = 2;
-            this.label2.Text = "WinPurge 0.5";
+            this.label2.Text = "WinPurge 0.6";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
@@ -93,6 +93,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StartForm";
             this.ShowInTaskbar = false;
