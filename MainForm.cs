@@ -169,10 +169,10 @@ namespace WinFormsApp1
 
         private void displayStoreItems()
         {
-            string[] lines = File.ReadAllLines(@"..\..\AppxName.txt");
-            string[] lines2 = File.ReadAllLines(@"..\..\AppxFullName.txt");
-            string[] publisherFile = File.ReadAllLines(@"..\..\Publisher.txt");
-            string[] versionInfo = File.ReadAllLines(@"..\..\Version.txt");
+            string[] lines = File.ReadAllLines(@"AppxName.txt");
+            string[] lines2 = File.ReadAllLines(@"AppxFullName.txt");
+            string[] publisherFile = File.ReadAllLines(@"Publisher.txt");
+            string[] versionInfo = File.ReadAllLines(@"Version.txt");
             string[] publisherFileExclusive = new string[publisherFile.Length];
             int count = 0;
 
