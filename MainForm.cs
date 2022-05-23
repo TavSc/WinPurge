@@ -38,6 +38,7 @@ namespace WinFormsApp1
         {
             
             StartForm form2 = new StartForm();
+            
             form2.ShowDialog();
             displayItems();
             displayStoreItems();
@@ -323,7 +324,9 @@ namespace WinFormsApp1
         {
             if (IsAdministrator == true)
             {
+
                 var result=MessageBox.Show("The application will reload as Administrator. If you want to run it without administrator privileges, close the app and open it again. Do you want to continue anyways?", "Warning", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                
                 if(result == DialogResult.OK)
                 {
                     Application.Restart();
