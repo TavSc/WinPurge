@@ -12,3 +12,23 @@ El programa está desarrollado.
 ```csharp
 using System.Collections;
 ```
+
+Biblioteca que contiene clases e interfaces que ayudan a definir varios objetos, como lo son listas, queues, arrays, diccionarios y tablas hash.
+
+[Documentación de Microsoft (.NET 6)](https://docs.microsoft.com/en-us/dotnet/api/system.collections?view=net-6.0)
+
+```csharp
+using Microsoft.Win32;
+```
+
+Biblioteca que ayuda a manejar eventos generados por el sistema operativo, así como la manipulación y obtención de datos del registro de Windows.
+
+[Documentación de Microsoft (.NET 6)](https://docs.microsoft.com/en-us/dotnet/api/microsoft.win32?view=net-6.0)
+
+```csharp
+using System.Diagnostics;
+```
+
+```csharp
+using Microsoft.Toolkit.Uwp.Notifications;
+```
