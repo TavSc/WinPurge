@@ -42,6 +42,36 @@ namespace WinFormsApp1
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            if (File.Exists(".\\AppxName.txt"))
+            {
+                if (File.Exists(".\\AppxFullName.txt"))
+                {
+                    if (File.Exists(".\\Publisher.txt"))
+                    {
+                        if (File.Exists(".\\Version.txt"))
+                        {
+                            SetText("Loading Files");
+                        }
+                        else
+                        {
+                            File.Create(".\\Version.txt");
+                        }
+                    }
+                    else
+                    {
+                        File.Create(".\\Publisher.txt");
+                    }
+                }
+                else
+                {
+                    File.Create(".\\AppxFullName.txt");
+                }
+            }
+            else
+            {
+                File.Create(".\\AppxName.txt");
+            }
+
             SetText("Loading Microsoft Store Apps");
             int j = 0;
             for(int i = 0; i < 9; i++)
