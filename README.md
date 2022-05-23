@@ -9,3 +9,6 @@ El programa está desarrollado.
 - **Recomendado** [Windows 11](https://www.microsoft.com/es-es/software-download/windows11)
 
 ## Bibliotecas utilizadas:
+```csharp
+using System.Collections;
+```
