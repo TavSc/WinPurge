@@ -89,8 +89,8 @@ namespace WinFormsApp1
             start3.FileName = @"powershell.exe";
             start3.CreateNoWindow = true;
             ;
-            string command2 = "Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select PackageFullName | Out-File -FilePath AppxFullName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Version | Out-File -FilePath Version.txt";
-            string command3 = "Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Name | Out-File -FilePath AppxName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Publisher | Out-File -FilePath Publisher.txt";
+            string command2 = "cd '"+Directory.GetCurrentDirectory()+"';Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select PackageFullName | Out-File -FilePath AppxFullName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Version | Out-File -FilePath Version.txt";
+            string command3 = "cd '"+Directory.GetCurrentDirectory()+"';Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Name | Out-File -FilePath AppxName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Publisher | Out-File -FilePath Publisher.txt";
 
             start3.Arguments = command2;
             process3.StartInfo = start3;

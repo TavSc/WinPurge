@@ -46,7 +46,7 @@ namespace WinFormsApp1
             if (IsAdministrator == true)
             {
                 this.Text = "WinPurge (Administrator)";
-                this.Icon = Icon.ExtractAssociatedIcon(@"..\..\..\Resources\WinPurgeAdmin.ico");
+                this.Icon = Icon.ExtractAssociatedIcon(@"WinPurgeAdmin.ico");
             }
             Debug.WriteLine("Test");
            
@@ -124,7 +124,7 @@ namespace WinFormsApp1
                                 }
                                 else
                                 {
-                                    dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), displayName, publisher, version, "Win32", uninstallString);
+                                    dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, displayName, publisher, version, "Win32", uninstallString);
 
                                 }
                                 //hey.Add(subkey_name);
@@ -158,7 +158,7 @@ namespace WinFormsApp1
                             {
 
                                 //dataGridView1.Rows.Add(false, Icon.ExtractAssociatedIcon(@"C:\Users\Public\Desktop\League of Legends.lnk"), displayName, publisher, "Win32");
-                                dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), displayName, publisher, version,"Win32", uninstallString);
+                                dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, displayName, publisher, version,"Win32", uninstallString);
                                 //hey.Add(subkey_name);
                             }
                         }
@@ -214,31 +214,31 @@ namespace WinFormsApp1
                     switch (publisherFileExclusive[i - 2].Trim())
                     {
                         case "5BD5593D-A41B-4F89-884E-B4F3E0FBAA75":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "Apple Inc.", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "Apple Inc.", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         case "4975D53F-AA7E-49A5-8B49-EA4FDC1BB66B":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "Python Software Foundation", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "Python Software Foundation", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         case "D6816951-877F-493B-B4EE-41AB9419C326":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "NVIDIA Corporation", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "NVIDIA Corporation", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         case "58D26209-1D57-482C-B403-B655571B5C7B":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "Dolby Laboratories", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "Dolby Laboratories", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         case "EB51A5DA-0E72-4863-82E4-EA21C1F8DFE3":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "Intel Corporation", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "Intel Corporation", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         case "453637B3-4E12-4CDF-B0D3-2A3C863BF6EF":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "Spotify AB", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "Spotify AB", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         case "83564403-0B26-46B8-9D84-040F43691D31":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "Realtek Semiconductor Corp.", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "Realtek Semiconductor Corp.", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         case "52120C15-ACFA-47FC-A7E3-4974DBA79445":
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), "Netflix, Inc.", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), "Netflix, Inc.", "Unknown", "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                         default:
-                            dataGridView1.Rows.Add(false, Image.FromFile(@"D:\salas\Desktop\Microsoft_Store_2021_Light.ico"), lines[i].Trim(), publisherFileExclusive[i - 2].Trim(), versionInfo[i-2].Trim(), "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
+                            dataGridView1.Rows.Add(false, WinPurge.Properties.Resources.Microsoft_Store_2021_Light, lines[i].Trim(), publisherFileExclusive[i - 2].Trim(), versionInfo[i-2].Trim(), "Microsoft Store", "Remove-AppxPackage " + lines2[i].Trim());
                             break;
                     }
                 }
