@@ -86,28 +86,34 @@ namespace WinFormsApp1
             Process process3 = new Process();
             ProcessStartInfo start3 = new ProcessStartInfo();
             start3.WindowStyle = ProcessWindowStyle.Hidden;
+            start3.UseShellExecute = true;
+            start3.Verb = "runas";
             start3.FileName = @"powershell.exe";
             start3.CreateNoWindow = true;
             ;
             string command2 = "cd '"+Directory.GetCurrentDirectory()+"';Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select PackageFullName | Out-File -FilePath AppxFullName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Version | Out-File -FilePath Version.txt";
-            string command3 = "cd '"+Directory.GetCurrentDirectory()+"';Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Name | Out-File -FilePath AppxName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Publisher | Out-File -FilePath Publisher.txt";
-
-            start3.Arguments = command2;
+            string command3 = ";Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Name | Out-File -FilePath AppxName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Publisher | Out-File -FilePath Publisher.txt";
+            string command = command2 + command3;
+            start3.Arguments = command;
             process3.StartInfo = start3;
-            process3.Start();
+            try
+            {
+                process3.Start();
+            }
+            catch
+            {
+                new ToastContentBuilder().AddText("Error").AddText("UAC Rejected! You have to accept the UAC in order to update the list of installed programs!").Show();
+            }
+
             backgroundWorker1.ReportProgress(j);
-            Process process4 = new Process();
+            /*Process process4 = new Process();
             ProcessStartInfo start4 = new ProcessStartInfo();
             start4.WindowStyle = ProcessWindowStyle.Hidden;
             start4.FileName = @"powershell.exe";
             start4.CreateNoWindow = true;
             start4.Arguments = command3;
             process4.StartInfo = start4;
-            process4.Start();
-
-
-            process4.WaitForExit();
-            backgroundWorker1.ReportProgress(j +2 );
+            process4.Start();*/
             process3.WaitForExit();
 
             SetText("Loading Win32 Apps");
@@ -118,8 +124,15 @@ namespace WinFormsApp1
             SetText("Opening Window");
             Thread.Sleep(500);
             backgroundWorker1.ReportProgress(100);
-            new ToastContentBuilder().AddText("WinPurge").AddText("Loading Done!").Show();
-            process4.Kill();
+            if (IsAdministrator)
+            {
+                new ToastContentBuilder().AddText("WinPurge").AddText("Loading Done! WinPurge is Running as Administrator.").Show();
+            }
+            else
+            {
+                new ToastContentBuilder().AddText("WinPurge").AddText("Loading Done!").Show();
+
+            }
             process3.Kill();
         }
 
