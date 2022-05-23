@@ -42,34 +42,37 @@ namespace WinFormsApp1
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (File.Exists(".\\AppxName.txt"))
+            if (File.Exists("AppxName.txt"))
             {
-                if (File.Exists(".\\AppxFullName.txt"))
+                
+            }
+            else
+            {
+                File.Create("AppxName.txt");
+                if (File.Exists("AppxFullName.txt"))
                 {
-                    if (File.Exists(".\\Publisher.txt"))
+                    
+                }
+                else
+                {
+                    File.Create("AppxFullName.txt");
+                    if (File.Exists("Publisher.txt"))
                     {
-                        if (File.Exists(".\\Version.txt"))
+                        
+                    }
+                    else
+                    {
+                        File.Create("Publisher.txt");
+                        if (File.Exists("Version.txt"))
                         {
                             SetText("Loading Files");
                         }
                         else
                         {
-                            File.Create(".\\Version.txt");
+                            File.Create("Version.txt");
                         }
                     }
-                    else
-                    {
-                        File.Create(".\\Publisher.txt");
-                    }
                 }
-                else
-                {
-                    File.Create(".\\AppxFullName.txt");
-                }
-            }
-            else
-            {
-                File.Create(".\\AppxName.txt");
             }
 
             SetText("Loading Microsoft Store Apps");
@@ -86,8 +89,8 @@ namespace WinFormsApp1
             start3.FileName = @"powershell.exe";
             start3.CreateNoWindow = true;
             ;
-            string command2 = "cd .. ;cd ..;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select PackageFullName | Out-File -FilePath .\\AppxFullName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Version | Out-File -FilePath .\\Version.txt";
-            string command3 = "cd .. ;cd ..;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Name | Out-File -FilePath .\\AppxName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Publisher | Out-File -FilePath .\\Publisher.txt";
+            string command2 = "Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select PackageFullName | Out-File -FilePath AppxFullName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Version | Out-File -FilePath Version.txt";
+            string command3 = "Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Name | Out-File -FilePath AppxName.txt;Get-AppxPackage | Where-Object { $_.NonRemovable -eq $false -and $_.IsFramework -eq $false }|Select Publisher | Out-File -FilePath Publisher.txt";
 
             start3.Arguments = command2;
             process3.StartInfo = start3;
