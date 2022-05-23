@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinPurge", "WinPurge.csproj", "{E39C6972-0B58-4162-934F-6A6A09B73D9A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WinPurge Setup", "..\WinPurge Setup\WinPurge Setup.vdproj", "{89F57B6D-2C65-4BF3-A575-9B986B5257B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{E39C6972-0B58-4162-934F-6A6A09B73D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E39C6972-0B58-4162-934F-6A6A09B73D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E39C6972-0B58-4162-934F-6A6A09B73D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F57B6D-2C65-4BF3-A575-9B986B5257B8}.Debug|Any CPU.ActiveCfg = Debug
+		{89F57B6D-2C65-4BF3-A575-9B986B5257B8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
