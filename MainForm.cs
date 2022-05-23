@@ -46,7 +46,7 @@ namespace WinFormsApp1
             if (IsAdministrator == true)
             {
                 this.Text = "WinPurge (Administrator)";
-                this.Icon = Icon.ExtractAssociatedIcon(@"WinPurgeAdmin.ico");
+                this.Icon = Icon.ExtractAssociatedIcon(Directory.GetCurrentDirectory()+"\\WinPurgeAdmin.ico");
             }
             Debug.WriteLine("Test");
            
