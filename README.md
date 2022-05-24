@@ -28,10 +28,15 @@ Biblioteca que ayuda a manejar eventos generados por el sistema operativo, así 
 ```csharp
 using System.Diagnostics;
 ```
+Biblioteca que ayuda a la interacción con procesos, contadores de rendimiento y logs.
 
+[Documentación de Microsoft (.NET 6)](https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics?view=net-6.0)
 ```csharp
 using Microsoft.Toolkit.Uwp.Notifications;
 ```
+Biblioteca que se encarga de la interacción y creación de notificaciones nativas para el sistema.
+
+[Documentación de Microsoft (.NET 6)](https://docs.microsoft.com/en-us/dotnet/api/microsoft.toolkit.uwp.notifications?view=win-comm-toolkit-dotnet-7.0)
 ```csharp
 using System.ComponentModel;
 ```
