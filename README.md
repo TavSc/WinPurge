@@ -40,15 +40,21 @@ Biblioteca que se encarga de la interacción y creación de notificaciones nativ
 ```csharp
 using System.ComponentModel;
 ```
+Biblioteca dedicada a la implementación del comportamiento en runtime y tiempo de diseño de componentes y controles de WinForms.
+
+[Documentación de Microsoft (.NET 6)](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel?view=net-6.0)
 ```csharp
 using System.Security.Principal;
 ```
+Biblioteca utilizada para saber el contexto de seguridad de una aplicación.
+
+[Documentación de Microsoft (.NET 6)](https://docs.microsoft.com/en-us/dotnet/api/system.security.principal?view=net-6.0)
 ```csharp
 using System.Reflection;
 ```
-```csharp
-using System.ComponentModel;
-```
+Bblioteca que examina los metadatos del proyetco para obtener información sobre módulos, assemblies, parámetros, etc.
+
+[Documentación de Microsoft (.NET 6)](https://docs.microsoft.com/en-us/dotnet/api/system.reflection?view=net-6.0)
 
 ## Programas
 ```
