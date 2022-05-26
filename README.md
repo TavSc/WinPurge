@@ -1,6 +1,6 @@
 # WinPurge
 
-El programa está desarrollado.
+Simple pero eficiente programa para desinstalar software de una computadora, así como los sobrantes que puedan quedar.
 
 ## Requerimientos:
 - .NET 6.0 Desktop Runtime (v6.0.5) - Windows x64 - [Descargar](https://download.visualstudio.microsoft.com/download/pr/5681bdf9-0a48-45ac-b7bf-21b7b61657aa/bbdc43bc7bf0d15b97c1a98ae2e82ec0/windowsdesktop-runtime-6.0.5-win-x64.exe).
@@ -59,4 +59,13 @@ Bblioteca que examina los metadatos del proyetco para obtener información sobre
 ## Programas
 ```
 MainForm.cs
+```
+```
+LeftoversForm.cs
+```
+```
+StartForm.cs
+```
+```
+UninstallForm.cs
 ```
