@@ -64,9 +64,16 @@ Este es el archivo fuente de la ventana principal del programa. En el archivo se
 ```
 LeftoversForm.cs
 ```
+Este es el archivo encargado de recibir la información de los programas desinstalados. Una vez recibida la lista, el programa hace una búsqueda de carpetas que hayan sobrado después de la desinstalación. Al acabar de realizar el proceso, reinicia la aplicación para actualizar la lista de aplicaciones instaladas.
 ```
 StartForm.cs
 ```
+Es el archivo de inicio, cuando el usuario quiere correr el programa, este archivo se encarga de pedir los permisos para correr unos comandos que ayudan a actualizar la lista de aplicaciones instaladas.
 ```
 UninstallForm.cs
+```
+Este archivo de encarga de realizar la desinstalación de los programas. Recibe la lista de programas por desinstalar de MainForm.cs, se activan unos comandos de Powershell y CMD, dependiendo del tipo de aplicación, y al terminar envía una lista de los programas desinstalados a LeftoversForm.cs
+
+```
+Nota: Todos los archivos tienen asociado un archivo con terminación designer.cs, que son códigos autogenerados por Visual Studio para el manejo de los elementos gráficos.
 ```
