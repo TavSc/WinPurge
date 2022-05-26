@@ -60,6 +60,7 @@ Bblioteca que examina los metadatos del proyetco para obtener información sobre
 ```
 MainForm.cs
 ```
+Este es el archivo fuente de la ventana principal del programa. En el archivo se manejan todos los botones de la pantalla principal, así como el DataGridView, el status de los desinstaladores, y el manejo de la selección de los desisntaladores que se van a llamar.
 ```
 LeftoversForm.cs
 ```
